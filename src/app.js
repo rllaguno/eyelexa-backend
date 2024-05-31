@@ -1,33 +1,20 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const fs = require('fs')
-const path = require('path')
-const morgan = require('morgan')
-const router = require('./routes/route')
-const app = express()
+//app.js
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
+const router = require('./routes/route');
 
-app.use(cors())
+const app = express();
 
-// parse application/x-ww-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(morgan('dev'));
 
-// parse application/json
-app.use(bodyParser.json())
-app.use(morgan('dev'))
+app.use(router);
 
-// create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, '/logs/access.log'), { flags: 'a'})
-
-//setup the logger
-app.use(morgan('combined', { stream: accessLogStream }))
-app.use(router)
-app.get('/', (req, res) => {
-    res.send('Hello from API :) &nbsp; &nbsp; &nbsp; &nbsp;')
-})
-const port = 3000
-
-// app.listen(process.env.PORT || port , (err) => {
+const port = 3000;
 app.listen(port, () => {
-    console.log('Server started running on : ' + port)
-})
+    console.log('Server started running on port: ' + port);
+});

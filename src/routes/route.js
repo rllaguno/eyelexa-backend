@@ -1,14 +1,11 @@
 const express = require('express');
 const multer = require('multer');
-
-//Controller
-const devController = require('../controllers/devController')
+const imageController = require('../controllers/imageController');
 
 const router = express.Router();
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
+const upload = multer({ storage: multer.memoryStorage() });
 
-//devController routes
-router.post('/api/devController/uploadImage', upload.single('image'), devController.uploadImage)
+//api route to upload image
+router.post('/api/uploadImage', upload.single('image'), imageController.processImage);
 
 module.exports = router;
