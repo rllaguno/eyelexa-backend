@@ -10,9 +10,9 @@ create table restaurant(
     menu TEXT
 );
     
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('McDonalds', 'Big Mac $120, Papas $50, Coca Cola $40');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Burger King', 'Whopper $110, Papas $50, Coca Cola $30');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('KFC', 'Pollo $130, Papas $40, Coca Cola $35');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Pizza Hut', 'Pizza $150, Coca Cola $40');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Chilaquiles Tec', 'Chilaquiles Rojos o Verdes, Media orden $50, Orden completa $75');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Little Caesars Pizza', 'Pizza Pepperoni $99, Pizza Queso $89, Crazy Bread $34');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Carls Jr', 'Famous Star, Western Bacon, Chicken Sandwich, Sin combo $100, Con combo $150');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Super Salads', 'Ensalada Buffalo Tender $130, Ensalada Cesar $120, Torta Bacon Chicken $140');
 
 SELECT * FROM restaurant;
