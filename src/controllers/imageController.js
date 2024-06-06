@@ -30,7 +30,7 @@ class ImageController {
                 console.log(`Detected Aruco ID: ${arucoId}`);
 
                 if (isNaN(arucoId)) {
-                    throw new Error("No valid Aruco marker found in image");
+                    throw new Error("No se identifico un Aruco valido en la imagen");
                 }
 
                 // Query the database with the obtained ID

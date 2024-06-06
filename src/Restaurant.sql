@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS eyelexa;
-
 CREATE DATABASE eyelexa;
 
 use eyelexa;
@@ -10,9 +8,9 @@ create table restaurant(
     menu TEXT
 );
     
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Chilaquiles Tec', 'Chilaquiles Rojos o Verdes, Media orden $50, Orden completa $75');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Little Caesars Pizza', 'Pizza Pepperoni $99, Pizza Queso $89, Crazy Bread $34');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Carls Jr', 'Famous Star, Western Bacon, Chicken Sandwich, Sin combo $100, Con combo $150');
-INSERT INTO restaurant (restaurant_name, menu) VALUES ('Super Salads', 'Ensalada Buffalo Tender $130, Ensalada Cesar $120, Torta Bacon Chicken $140');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Chilaquiles Tec', 'Chilaquiles rojos o verdes, media orden 50 pesos, orden completa 75 pesos');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Little Caesars Pizza', 'Pizza pepperoni 99 pesos, pizza queso 89 pesos, crazy bread 34 pesos');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Carls Junior', 'Famous star, western bacon, chicken sandwich, sin combo 100 pesos, con combo 150 pesos');
+INSERT INTO restaurant (restaurant_name, menu) VALUES ('Super Salads', 'Ensalada buffalo tender 130 pesos, ensalada cesar 120 pesos, torta bacon chicken 140 pesos');
 
 SELECT * FROM restaurant;
